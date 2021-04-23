@@ -66,3 +66,5 @@ if [ "$1" = "bumper" ]; then
 fi
 
 echo Sorry, but I don\'t know what "$1" means...
+
+# vim: ts=2:sw=2:expandtab:
