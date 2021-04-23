@@ -2,7 +2,7 @@
 
 set -euf -o pipefail
 
-WEBCAM="C922 Pro Stream"
+WEBCAM="HD Pro Webcam C920"
 DEVICE=$(v4l2-ctl --list-devices |grep -A1 "$WEBCAM" | grep -v "$WEBCAM" | xargs)
 
 MIN_ZOOM=100
