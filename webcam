@@ -45,26 +45,27 @@ bumper() {
   mpv -fs ~/Videos/bumper.mp4
 }
 
-if [ "$1" = "show" ]; then
-  show_web_cam
-  exit
-fi
-
-if [ "$1" = "zoom_in" ]; then
-  zoom_in
-  exit
-fi
-
-if [ "$1" = "zoom_out" ]; then
-  zoom_out
-  exit
-fi
-
-if [ "$1" = "bumper" ]; then
-  bumper
-  exit
-fi
-
-echo Sorry, but I don\'t know what "$1" means...
+case "$1" in 
+  show)
+    show_web_cam
+    exit 0
+    ;;
+  zoom_in)
+    zoom_in
+    exit 0
+    ;;
+  zoom_out)
+    zoom_out
+    exit 0
+    ;;
+  bumper)
+    bumper
+    exit 0
+    ;;
+  *)
+    echo Sorry, but I don\'t know what "$1" means...
+    exit 1
+    ;;
+esac
 
 # vim: ts=2:sw=2:expandtab:
